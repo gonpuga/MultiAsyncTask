@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Modos de ejecución"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Num. Cores: "
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:id="@+id/txtNumCores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    Num. Hilos. Concurrentes: "
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:id="@+id/txtNumThreads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDefecto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ejecución por defecto" />
+
+    <Button
+        android:id="@+id/btnSecuencial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ejecución secuencial" />
+
+    <Button
+        android:id="@+id/btnConcurrente"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ejecución concurrente" />
+
+    <ProgressBar
+        android:id="@+id/progressbar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0" />
+
+    <ProgressBar
+        android:id="@+id/progressbar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0" />
+
+    <ProgressBar
+        android:id="@+id/progressbar3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0" />
+
+    <ProgressBar
+        android:id="@+id/progressbar4"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0" />
+
+    <ProgressBar
+        android:id="@+id/progressbar5"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0" />
+
+</LinearLayout>
