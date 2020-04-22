@@ -1,9 +1,10 @@
 package com.example.multiasynctask;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -24,25 +25,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        progressBar1 = (ProgressBar)findViewById(R.id.progressbar1);
-        progressBar2 = (ProgressBar)findViewById(R.id.progressbar2);
-        progressBar3 = (ProgressBar)findViewById(R.id.progressbar3);
-        progressBar4 = (ProgressBar)findViewById(R.id.progressbar4);
-        progressBar5 = (ProgressBar)findViewById(R.id.progressbar5);
+        progressBar1 = findViewById(R.id.progressbar1);
+        progressBar2 = findViewById(R.id.progressbar2);
+        progressBar3 = findViewById(R.id.progressbar3);
+        progressBar4 = findViewById(R.id.progressbar4);
+        progressBar5 = findViewById(R.id.progressbar5);
 
-        btnDefecto = (Button)findViewById(R.id.btnDefecto);
+        btnDefecto = findViewById(R.id.btnDefecto);
         btnDefecto.setOnClickListener(this);
-        btnSecuencial = (Button)findViewById(R.id.btnSecuencial);
+        btnSecuencial = findViewById(R.id.btnSecuencial);
         btnSecuencial.setOnClickListener(this);
-        btnConcurrente = (Button)findViewById(R.id.btnConcurrente);
+        btnConcurrente = findViewById(R.id.btnConcurrente);
         btnConcurrente.setOnClickListener(this);
 
         //FUNCIONES ADICIONALES PARA INFORMAR DEL NÚMERO DE CORES
         // determinamos el numero de núcleos
         int cores=getNumOfCores();
-        TextView txtNumCores=(TextView)findViewById(R.id.txtNumCores);
+        TextView txtNumCores=findViewById(R.id.txtNumCores);
         txtNumCores.setText(cores+"");
-        TextView txtNumHilosConcurrentes=(TextView)findViewById(R.id.txtNumThreads);
+        TextView txtNumHilosConcurrentes=findViewById(R.id.txtNumThreads);
         txtNumHilosConcurrentes.setText((cores+1)+"");
         //Log.d(TAG, "El número de cores es: "+cores);
     }
@@ -137,5 +138,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return 1;//en caso de error permite la ejecución secuencial
     }
-    
 }
