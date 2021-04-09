@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "ServicioCronometro21"
+rootProject.name = "MultiAsyncTask"
